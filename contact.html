@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Josh Thompson Dating Advisory</title>
+<meta name="description" content="Request a private consultation with Josh Thompson, dating advisor for accomplished elder millennials.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav container">
+    <a href="index.html" class="brand">Josh Thompson<span>.</span></a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Request a private consultation.</h1>
+    <p class="lead">Tell me a bit about yourself and what you're looking for. All inquiries are confidential, and I personally respond within 48 hours.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-info">
+      <div>
+        <div class="label">Email</div>
+        <a href="mailto:josh@joshthompson.com">josh@joshthompson.com</a>
+      </div>
+      <div>
+        <div class="label">Availability</div>
+        <p style="margin:0;">By appointment, video or in person</p>
+      </div>
+      <div>
+        <div class="label">Response Time</div>
+        <p style="margin:0;">Within 48 hours</p>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-row">
+        <div>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div>
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="age-range">Age Range</label>
+          <select id="age-range" name="age-range">
+            <option value="30-34">30–34</option>
+            <option value="35-39">35–39</option>
+            <option value="40-44">40–44</option>
+            <option value="45+">45+</option>
+          </select>
+        </div>
+        <div>
+          <label for="service">Service of Interest</label>
+          <select id="service" name="service">
+            <option value="consultation">The Private Consultation</option>
+            <option value="profile">The Refined Profile</option>
+            <option value="retainer">The Quarterly Retainer</option>
+            <option value="not-sure">Not Sure Yet</option>
+          </select>
+        </div>
+      </div>
+      <label for="message">Tell Me About Your Situation</label>
+      <textarea id="message" name="message" required placeholder="Share a bit about where you are in your dating life and what you're hoping to change."></textarea>
+      <button type="submit" class="btn btn-solid">Send Inquiry</button>
+      <p class="form-note" style="margin-top:20px; color: var(--color-text-muted);"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="brand">Josh Thompson</span>
+    <p>Private Dating Advisory for the Modern Millennial</p>
+    <p>&copy; 2026 Josh Thompson. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
