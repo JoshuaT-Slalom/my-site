@@ -221,6 +221,12 @@ section { padding: 100px 0; }
   border: 1px solid var(--color-border);
 }
 
+.split .profile-image {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 blockquote {
   font-family: var(--font-display);
   font-size: 1.3rem;
