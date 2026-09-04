@@ -208,6 +208,26 @@ section { padding: 100px 0; }
   margin: 14px 0;
 }
 
+.service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .btn {
+  width: 100%;
+  max-width: 240px;
+  min-height: 56px;
+  margin-top: auto;
+  padding-right: 16px;
+  padding-left: 16px;
+  align-self: center;
+  text-align: center;
+}
+
+.service-card p:last-of-type {
+  margin-bottom: 24px;
+}
+
 /* ---------- Quote / About split ---------- */
 .split {
   display: grid;
