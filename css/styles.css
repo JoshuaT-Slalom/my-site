@@ -312,6 +312,34 @@ textarea { resize: vertical; min-height: 140px; }
 /* ---------- Nav toggle (mobile) ---------- */
 .nav-toggle { display: none; }
 
+/* ---------- Weather widget ---------- */
+.weather-card { max-width: 420px; margin: 20px auto 0; padding: 12px 16px; border-radius: 8px; display: flex; align-items: center; gap: 18px; justify-content: space-between; }
+.weather-main { display: flex; align-items: center; gap: 14px; flex: 1 1 auto; }
+.weather-emoji { font-size: 2.6rem; display: block; line-height: 1; }
+.weather-temp { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-gold-light); }
+.weather-desc { font-size: 0.92rem; color: var(--color-text-muted); }
+.weather-toggle { display: inline-flex; position: relative; background: rgba(27,33,43,0.98); border: 1px solid var(--color-border); border-radius: 999px; padding: 4px; gap: 4px; align-items: center; width: 84px; justify-content: space-between; opacity: 0.72; }
+.weather-toggle .unit-btn { position: relative; z-index: 2; background: transparent; border: none; padding: 4px 6px; font-weight: 600; color: var(--color-text-muted); cursor: pointer; border-radius: 999px; font-size: 0.78rem; }
+.weather-toggle .unit-btn.active { color: #16191f; }
+.weather-toggle .unit-indicator { position: absolute; left: 4px; top: 4px; width: calc(50% - 4px); height: calc(100% - 8px); background: var(--color-gold); border-radius: 999px; z-index: 1; transition: transform 220ms ease; transform: translateX(0); }
+.weather-permission { display: flex; flex-direction: column; gap: 8px; }
+.weather-permission-note { font-size: 0.85rem; color: var(--color-text-muted); }
+.weather-permission-actions { display: flex; gap: 8px; margin-top: 6px; }
+.weather-manual-btn { background: transparent; border: 1px solid var(--color-border); color: var(--color-text-muted); }
+
+@media (min-width: 860px) {
+  .hero .weather-card { position: absolute; right: 48px; top: 36px; margin: 0; }
+  .hero { position: relative; }
+}
+
+@media (max-width: 420px) {
+  .weather-card { max-width: 260px; }
+  .weather-main { gap: 10px; }
+  .weather-toggle { flex-direction: column; width: 44px; height: 84px; padding: 6px; opacity: 0.85; }
+  .weather-toggle .unit-btn { padding: 6px 0; width: 100%; text-align: center; }
+  .weather-toggle .unit-indicator { left: 4px; top: 4px; width: calc(100% - 8px); height: calc(50% - 4px); transform: translateY(0); }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .grid-3 { grid-template-columns: 1fr; }
