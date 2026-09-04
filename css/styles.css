@@ -155,6 +155,41 @@ p { margin: 0 0 1em; color: var(--color-text-muted); }
   line-height: 1.15;
 }
 
+.hero-script-headline-animated {
+  clip-path: none;
+}
+
+.hero-script-headline-animated .headline-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-script-headline-animated .headline-character {
+  display: inline-block;
+  opacity: 0;
+  animation: headline-character-write 180ms ease-out forwards;
+  animation-delay: calc(var(--character-index) * 75ms);
+}
+
+@keyframes headline-character-write {
+  from {
+    opacity: 0;
+    transform: translateY(0.12em);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-script-headline-animated .headline-character {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .hero p.lead {
   max-width: 600px;
   margin: 0 auto 36px;
@@ -413,4 +448,5 @@ textarea { resize: vertical; min-height: 140px; }
     cursor: pointer;
   }
   .hero { padding: 100px 0 80px; }
+  .hero h1.hero-script-headline-animated { font-size: clamp(1.55rem, 7.5vw, 3.6rem); }
 }

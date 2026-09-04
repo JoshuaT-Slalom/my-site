@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
+  var animatedHeadline = document.querySelector('.hero-script-headline-animated');
+  if (animatedHeadline) {
+    var characterIndex = 0;
+    animatedHeadline.querySelectorAll('.headline-line').forEach(function (line) {
+      var text = line.textContent;
+      line.textContent = '';
+      Array.from(text).forEach(function (character) {
+        var characterEl = document.createElement('span');
+        characterEl.className = 'headline-character';
+        characterEl.textContent = character === ' ' ? '\u00A0' : character;
+        characterEl.style.setProperty('--character-index', characterIndex++);
+        line.appendChild(characterEl);
+      });
+    });
+  }
+
   var widget = document.getElementById('weather-widget');
   if (!widget) return;
   var content = widget.querySelector('.weather-content');
