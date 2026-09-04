@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function requestLocation(attempt) {
     attempt = typeof attempt === 'number' ? attempt : 1;
-    setNote('Requesting location…');
+    setNote('Just figuring out where you are. For weather purposes. Obviously.');
     navigator.geolocation.getCurrentPosition(function (pos) {
       fetchWeather(pos.coords.latitude, pos.coords.longitude);
     }, function (err) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         setPermissionDisclaimer();
       }
-    }, {timeout: 4000});
+    }, {timeout: 10000});
   }
 
   function setPermissionDisclaimer() {
